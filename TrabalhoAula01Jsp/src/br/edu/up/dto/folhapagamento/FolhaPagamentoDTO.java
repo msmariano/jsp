@@ -7,6 +7,14 @@ import java.util.List;
 import br.edu.up.dao.folhapagamento.FolhaPagamentoDao;
 
 public class FolhaPagamentoDTO {
-	List<FolhaPagamentoDao> folha = new ArrayList<FolhaPagamentoDao>();
+	private List<FolhaPagamentoDao> folha = new ArrayList<FolhaPagamentoDao>();
+
+	public List<FolhaPagamentoDao> getFolha() {
+		return folha;
+	}
+
+	public void setFolha(List<FolhaPagamentoDao> folha) {
+		this.folha = folha;
+	}
 
 }

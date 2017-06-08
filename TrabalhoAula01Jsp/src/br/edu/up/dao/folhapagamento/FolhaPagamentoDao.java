@@ -4,11 +4,24 @@ import br.edu.up.dao.funcionario.FuncionarioDao;
 
 public class FolhaPagamentoDao {
 
-	private FuncionarioDao funcionarioDao;
+	private FuncionarioDao funcionarioDao = new FuncionarioDao();
 	private String mes;
 	private String ano;
 	private Double horas;
 	private Double valor;
+	
+	public String getCpf() {
+		return funcionarioDao.getCpf();
+	}
+	public void setCpf(String cpf) {
+		funcionarioDao.setCpf(cpf);
+	}
+	public String getNome() {
+		return funcionarioDao.getNome();
+	}
+	public void setNome(String nome) {
+		funcionarioDao.setNome(nome);
+	}
 	public FuncionarioDao getFuncionario() {
 		return funcionarioDao;
 	}

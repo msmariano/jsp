@@ -26,8 +26,8 @@ function validaLogin() {
 
 <p align = "center"><a href ="cadastrarfuncionario.jsp" >Cadastrar funcionário</a></p>
 <p align = "center"><a href ="folhapagamento.jsp" >Cadastrar folha de pagamento</a></p>
-<p align = "center"><a href ="folhapagamento.jsp" >Consultar folha de pagamento</a></p>
-<p align = "center"><a href ="folhapagamento.jsp" >Listar folhas de pagamento</a></p>
+<p align = "center"><a href ="consultafolhapagamento.jsp" >Consultar folha de pagamento</a></p>
+<p align = "center"><a href ="listafolhapagamento.jsp" >Listar folhas de pagamento</a></p>
 
 <form id="deslogar"  method ="post" action="login.jsp">
 	<input type="hidden" name="deslogar" value="on">
