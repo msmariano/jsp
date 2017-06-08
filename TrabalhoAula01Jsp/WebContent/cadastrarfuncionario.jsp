@@ -2,17 +2,28 @@
     pageEncoding="ISO-8859-1"%>
 <jsp:useBean id="funcionario" scope="page" class="br.edu.up.dao.funcionario.FuncionarioDao"/>
 <jsp:useBean id="funcionarios" scope="session" class="br.edu.up.dto.funcionario.FuncionarioDTO"/>
+<jsp:useBean id="login" scope="session"
+	class="br.edu.up.dto.login.Login" />
 <%@page import="br.edu.up.dao.funcionario.FuncionarioDao"%>
 
 <jsp:setProperty name="funcionario" property="*"/>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
+<script type="text/javascript">
+
+function validaLogin() {
+<%if (!login.isLogado()) {
+	out.println("document.getElementById(\"deslogar\").submit();");
+}
+	%>
+}
+</script>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Cadastro de Funcionário</title>
 </head>
-<body>
+<body onload="validaLogin();">
 	
 	<form id ="formcalcular" method = "post" action="cadastrarfuncionario.jsp">
 		<table align = "center" border = "1">
@@ -30,6 +41,12 @@
 	<form action = "inicial.jsp">
 		<p align ="center"><input type="submit" value="voltar">	
 	</form>
+	
+	<form id="deslogar"  method ="post" action="login.jsp">
+		<input type="hidden" name="deslogar" value="on">
+	</form>
+	
+	
 </body>
 <table border = "1">
 <%
